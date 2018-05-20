@@ -18,7 +18,9 @@ class App extends Component {
           <h1 className="App-title">Welcome to ComStack</h1>
         </header>
         {
-          this.state.stackIds.map(user => <Usercard user_id={user} />)
+          this.state.stackIds.map(function(user, i){
+            return <Usercard key={i+1} user_id={user} />
+          })
         }
       </div>
     );
